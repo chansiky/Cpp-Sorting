@@ -6,22 +6,22 @@
 #include <queue>
 
 ///quickSort Algorithm
-template<typename ElumType>
-void quickSort(std::vector<ElumType> &vT,typename std::vector<ElumType>::iterator indL,typename std::vector<ElumType>::iterator indR);
+template<typename _T>
+void quickSort(std::vector<_T> &vT,typename std::vector<_T>::iterator indL,typename std::vector<_T>::iterator indR);
 
 ///quickSort partitioning
-template<typename ElumType>
-int partition(std::vector<ElumType> &vT,typename std::vector<ElumType>::iterator l, typename std::vector<ElumType>::iterator r);
+template<typename _T>
+int partition(std::vector<_T> &vT,typename std::vector<_T>::iterator l, typename std::vector<_T>::iterator r);
 
 ///selects a random pivot
 int selectPivot(int L, int R);
 
 ///selects the median of three pivot
-template<typename ElumType>
-int selectPivot(std::vector<ElumType> &vT,typename std::vector<ElumType>::iterator l,typename std::vector<ElumType>::iterator r);
+template<typename _T>
+int selectPivot(std::vector<_T> &vT,typename std::vector<_T>::iterator l,typename std::vector<_T>::iterator r);
 
 ///subroutine for selecting pivot: check for finding out if a pivot is the lesser of the two;
-template<typename ElumType>
-bool checkIfMid(ElumType L, ElumType M, ElumType R);
+template<typename _T>
+bool checkIfMid(_T L, _T M, _T R);
 
 #include "quickSort.cpp"
