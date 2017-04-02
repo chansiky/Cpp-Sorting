@@ -5,9 +5,15 @@
 #include "swap.h"
 #include <queue>
 
+
+///quickSort Wrapper
+template<typename _T>
+void quickSort(std::vector<_T> &v_T);
+
 ///quickSort Algorithm
 template<typename _T>
-void quickSort(std::vector<_T> &vT,typename std::vector<_T>::iterator indL,typename std::vector<_T>::iterator indR);
+void quickSortFull(std::vector<_T> &vT,typename std::vector<_T>::iterator indL,typename std::vector<_T>::iterator indR);
+
 
 ///quickSort partitioning
 template<typename _T>

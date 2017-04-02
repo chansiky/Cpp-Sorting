@@ -1,9 +1,14 @@
 #include "quickSort.h"
 
 ////quicksort Algorithm
+//wrapper for the Quicksort Recursive Function
 template<typename _T>
-void quickSort(std::vector<_T> &vT, typename std::vector<_T>::iterator indL, typename std::vector<_T>::iterator indR) {
+void quickSort(std::vector<_T> &v_T) {
+	quickSortFull(v_T, v_T.begin(), v_T.end() - 1);
+}
 
+template<typename _T>
+void quickSortFull(std::vector<_T> &vT, typename std::vector<_T>::iterator indL, typename std::vector<_T>::iterator indR) {
 	int part; //location of partition from vT.begin()
 	//1) if the size of the vector < 1, (too short to be sorted), function ends.
 	if (vT.size() < 1) {
@@ -21,17 +26,17 @@ void quickSort(std::vector<_T> &vT, typename std::vector<_T>::iterator indL, typ
 		if (indL < p - 1) {
 			std::cout << "p-1" <<std::endl;////debug checkpoint code
 			coutQSBounds(vT, indL, p - 1);////debug checkpoint code
-			quickSort(vT, indL, p - 1);
+			quickSortFull(vT, indL, p - 1);
 		}
 	}
+
 	if (p < vT.end()-1) {
 		if (p + 1 < indR) {
 			std::cout << "p+1" <<std::endl;////debug checkpoint code
 			coutQSBounds(vT, p + 1, indR);////debug checkpoint code
-			quickSort(vT, p + 1, indR);
+			quickSortFull(vT, p + 1, indR);
 		}
 	}
-	
 }
 
 
